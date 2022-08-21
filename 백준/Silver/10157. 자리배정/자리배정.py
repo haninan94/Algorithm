@@ -18,9 +18,12 @@ visited[x][y] = True
 # 넣을 숫자
 counts = 1
 
+# counts 가 R*C 이하일동안 반복
 while counts < R*C:
+    # 델타 방향 반복
     for i in range(4):
         direction = i
+        # 델타가 상하로 움직일때
         if i == 0 or i == 2:
             for _ in range(R-1):
                 counts += 1
