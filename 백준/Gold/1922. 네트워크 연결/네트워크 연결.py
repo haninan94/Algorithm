@@ -1,3 +1,5 @@
+import sys
+
 def find_set(node):
     if node != parent[node]:
         parent[node] = find_set(parent[node])
@@ -11,7 +13,7 @@ counts = 0
 edges = []
 parent = list(range(N + 1))
 for i in range(M):
-    start, end, cost = map(int, input().split())
+    start, end, cost = map(int, sys.stdin.readline().split())
     edges.append((cost, start, end))
 
 edges.sort()  # 비용 기준으로 sort
